@@ -1,0 +1,39 @@
+.btn {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.plan-man {
+    display: flex;
+    justify-content: center
+}
+
+.input {
+    width:250px;
+    margin:5px 0px;
+    border-radius: 5px;
+    border:1px solid grey;
+    outline: 0;
+    font-size: 14px;
+    height: 40px;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+input::placeholder {
+    font-size: 14px;
+}
+input {
+    padding:3px 5px;
+}
+.add-plan-btn:focus .add-plan {
+    display: block;
+}
+/* .product-hover:focus .products {
+    display: block;
+}
+.products {
+    display: none;
+    position: absolute;
+} */
+

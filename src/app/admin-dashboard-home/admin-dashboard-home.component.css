@@ -1,0 +1,15 @@
+.infor {
+    font-size: 40px;
+    color:white
+}
+
+.login-info-block {
+    display: flex;
+    justify-content: center;
+    margin-top: 170px;
+}
+.home-block {
+    background-image: url('https://www.techrepublic.com/a/hub/i/r/2019/02/14/4f571ee4-f9de-4f80-8028-e9981ca7c1b0/resize/1200x/7e814383fc5f43db8033047fc9f57c1e/istock-901609212datasecurity.jpg');
+    height: 90%;
+    width:100%;
+}

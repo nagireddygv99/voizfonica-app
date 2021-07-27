@@ -1,0 +1,57 @@
+/* .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  } */
+  /* .error {
+    border-color: red;
+    outline-color: red;
+  }
+  
+  .hello {
+      width:300px
+  } */
+  .eye-icon {
+      border-bottom:2px solid;
+      border-left:0px;
+  }
+  .eye-icon:hover,.user-icon:hover {
+      cursor: pointer;
+  }
+  .admin-password-class, .admin-user-name-class {
+      border:0px;
+      border-bottom: 2px solid;
+      outline:0px;
+      width:200px;
+      background: transparent;
+  }
+
+  .mat-card {
+    border-radius: 2%;
+    box-shadow: 0px 0px 1px 1px;
+}
+
+  
+  
+  .user-icon {
+      border-bottom: 2px solid;
+      
+  }
+  .login-block {
+      display:flex;
+      justify-content: center;
+      
+  }
+  .login-btn-block {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+
+  }
+  .login-btn {
+    font-size: 15px;
+  }

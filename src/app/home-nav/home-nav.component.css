@@ -1,0 +1,100 @@
+a:active {
+    background-color: white;
+}
+a:focus {
+    background-color:white;
+    color:black
+}
+a {
+    font-family: roboto;
+    font-weight: 400;
+    text-decoration: none;
+}
+mat-toolbar {
+    color:white;
+}
+
+.btnn {
+    outline:0
+}
+
+.box
+{
+    width: 280px;
+    height: 450px;
+    margin: 50px;
+    padding:20px;
+    
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    background-color: rgb(229, 235, 240);
+}
+img {
+    height:400px;
+    width:500px;
+}
+
+.service-icons {
+    display: flex;
+}
+.icon {
+    width: 40px;
+    height:40px;
+    margin:10px 40px
+}
+.service {
+    display: flex;
+    justify-content: center;
+}
+.comp-logo {
+    color:black;
+    font-size: 20px; 
+    color:white
+}
+.comp-logo:hover {
+    cursor: pointer;
+}
+
+.list-prod {
+    display: none;
+    background-color: #040647 ;
+    color:white;
+    font-size: 15px;
+    padding:0px;
+    border-radius: 8px;
+}
+
+ul {
+    list-style-type: none;
+    left:0;
+    bottom:0px;
+    padding:0px;
+    margin:0px
+}
+li {
+    padding:10px 30px;
+}
+li:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+}
+
+.prod-hov:hover + .list-prod,.prod-hov:focus+.list-prod {
+    display: block;
+    position: absolute;
+}
+
+.text-on-image {
+    position:absolute;
+    font-size: 80px;
+    top:100px;
+    left:350px;
+    
+    display: flex;
+    color:white;
+    font-family: emoji;
+    
+}
+
+

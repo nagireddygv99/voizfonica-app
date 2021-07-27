@@ -1,0 +1,232 @@
+<!-- <div class="fluid-container">
+    <div class="row" style="margin-top: 20px;">
+
+    </div>
+    <div class="row">
+        <div class="col-lg-1">
+
+        </div>
+        <div class="col-lg-2">
+            <span style="color:red;font-size: 30px;">VoizFonica</span>
+        </div>
+        <div class="col-lg-5">
+
+        </div>
+        <div class="col-lg-1">
+            <a href="">Admin Login</a>
+        </div>
+        <div class="col-lg-1">
+            <a href="">Services</a>
+        </div>
+        <div class="col-lg-1">
+            <a href="">Help</a>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 70px;">
+
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+
+            <div class="row">
+                <div class="col-lg-2">
+
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="voizFonicaCarousel" class="carousel slide" data-ride="carousel" style="box-shadow: 1px 1px 1px 1px;">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#voizFonicaCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#voizFonicaCarousel" data-slide-to="1"></li>
+                                    <li data-target="#voizFonicaCarousel" data-slide-to="2"></li>
+                                  </ol>
+                                  <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img style="width:100%;height:300px;" src="data:image/jpeg;base64,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" alt="FirstImage">
+                                    </div>
+                                    <div class="item">
+                                        <img style="width:100%;height:300px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz3VU6WDWeDOzy5p-naCFVQYYY1VMGFWmLZg&usqp=CAU" alt="SecondImage">
+                                    </div>
+                                    <div class="item">
+                                        <img  style="width:100%;height:300px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo6yrq0-0r2slq6twwHiDzVnesmtPCknY20Q&usqp=CAU" alt="ThirdImage">
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+        <div class="col-lg-4">
+            <div>
+
+                <div class="all-inputs-signup">
+                    <h3 style="color:darkred;">Sign Up</h3>
+                </div>
+                <div class="all-inputs-signup">
+                    <input class="inputs-signup" [(ngModel)]="user.userFirstName" type="text" placeholder="First Name" required>
+                </div>
+                <div class="all-inputs-signup">
+                    <input class="inputs-signup" [(ngModel)]="user.userLastName" type="text" placeholder="Last Name" required>
+                </div>
+                <div class="all-inputs-signup">
+                    <input class="inputs-signup" (keyup)="checkForValidEmailId()" [(ngModel)]="user.userEmailId" type="text" placeholder="Email" required>
+                    <span *ngIf="!validEmail" style="color:red">Invalid Email</span>
+                </div>
+                <div class="all-inputs-signup">
+                    <input class="inputs-signup" (keyup)="checkForValidPhoneNumber()" [(ngModel)]="user.userPhoneNumber" type="text" placeholder="Phone Number" required>
+                    <span *ngIf="!validPhoneNumber" style="color:red">Invalid MobileNumber</span>
+                </div>
+                
+                <div class="all-inputs-signup">
+                    <input class="inputs-signup" [(ngModel)]="user.userPassword" type="password" placeholder="Password" required>
+                </div>
+                <div class="all-inputs-signup">
+                    <input class="inputs-signup" (keyup)="checkPasswordAndConfirmPassword()" [(ngModel)]="confirmPassword" type="text" placeholder="Confirm Password" required>
+                    <span *ngIf="!passwordAndConfirmPassword" style="color:red">Must be same as password</span>
+                </div>
+                <div class="all-inputs-signup">
+                    <input class="inputs-signup-submit" (click)="registerUser()" type="submit" value="Sign Up" />
+                </div>
+                <br>
+                <div  class="all-inputs-signup">
+                    <a href="login">Already have an account?</a>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="fluid-container">
+    <div class="row">
+        <div class="col-lg-4">
+
+        </div>
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div>
+
+                        <div class="all-inputs-signup">
+                            <h3 style="color:darkred;">Sign Up</h3>
+                        </div>
+                        <div class="all-inputs-signup">
+                            <input class="inputs-signup" [(ngModel)]="user.userFirstName" type="text" placeholder="First Name" required>
+                        </div>
+                        <div class="all-inputs-signup">
+                            <input class="inputs-signup" [(ngModel)]="user.userLastName" type="text" placeholder="Last Name" required>
+                        </div>
+                        <div class="all-inputs-signup">
+                            <input class="inputs-signup" (keyup)="checkForValidEmailId()" [(ngModel)]="user.userEmailId" type="text" placeholder="Email" required>
+                            <span *ngIf="!validEmail" style="color:red">Invalid Email</span>
+                        </div>
+                        <div class="all-inputs-signup">
+                            <input class="inputs-signup" (keyup)="checkForValidPhoneNumber()" [(ngModel)]="user.userPhoneNumber" type="text" placeholder="Phone Number" required>
+                            <span *ngIf="!validPhoneNumber" style="color:red">Invalid MobileNumber</span>
+                        </div>
+                        
+                        <div class="all-inputs-signup">
+                            <input class="inputs-signup" [(ngModel)]="user.userPassword" type="password" placeholder="Password" required>
+                        </div>
+                        <div class="all-inputs-signup">
+                            <input class="inputs-signup" (keyup)="checkPasswordAndConfirmPassword()" [(ngModel)]="confirmPassword" type="text" placeholder="Confirm Password" required>
+                            <span *ngIf="!passwordAndConfirmPassword" style="color:red">Must be same as password</span>
+                        </div>
+                        <div class="all-inputs-signup">
+                            <input class="inputs-signup-submit" (click)="registerUser()" type="submit" value="Sign Up" />
+                        </div>
+                        <br>
+                        <div  class="all-inputs-signup">
+                            <a href="login">Already have an account?</a>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> --> 
+<div class="container-fluid">
+
+    <div class="row">
+        
+        <div class="col-lg-12">
+            <mat-card class="mat-card">
+                <div class="all-inputs-signup">
+                    <h3 *ngIf="userExists">Account Exists !!</h3>
+                </div>
+                <div class="signup-title">
+                    <h2>Create your VoizFonica Account</h2>
+                </div>
+                <hr>
+                <div class="all-inputs-signup">
+                    <input class="inputs-signup" (keyup)="checkNameIsValid('firstname')" [(ngModel)]="user.userFirstName" type="text" placeholder="First Name" required>
+                    
+                </div>
+                <div *ngIf="!validFirstName" style="position:absolute; color:red;margin-left: 80px;">
+                    <mat-error>Name should contain only alphabets</mat-error>
+                </div>
+                <div class="all-inputs-signup">
+                    <input class="inputs-signup" (keyup)="checkNameIsValid('lastname')" [(ngModel)]="user.userLastName" type="text" placeholder="Last Name" required>
+                </div>
+                <div *ngIf="!validLastName" style="position:absolute; color:red;margin-left: 80px;">
+                    <mat-error>Name should contain only alphabets</mat-error>
+                </div>
+                <div class="all-inputs-signup">
+                    <input class="inputs-signup" (keyup)="checkForValidEmailId()" [(ngModel)]="user.userEmailId" type="text" placeholder="Email" required>
+                </div>
+                <div *ngIf="!validEmail" style="position:absolute; color:red;margin-left: 80px;">
+                    <mat-error>Invalid Email</mat-error>
+                </div>
+                <div class="all-inputs-signup">
+                    <input class="inputs-signup" (keyup)="checkForValidPhoneNumber()" [(ngModel)]="user.userPhoneNumber" type="number" placeholder="Phone Number" required>
+                </div>
+                <div *ngIf="!validPhoneNumber" style="position:absolute; color:red;margin-left: 80px;">
+                    <mat-error>Invalid MobileNumber</mat-error>
+                </div>
+                
+                <div class="all-inputs-signup">
+                    <input (keyup)="checkForEnteredPassword()" class="inputs-signup" [(ngModel)]="user.userPassword" type="password" placeholder="Password" required>
+                </div>
+                <div *ngIf="!enteredPasswordValid" style="position:absolute; color:red;margin-left: 80px;">
+                    <mat-error>Password contain atleat 8 letters</mat-error>
+                </div>
+                <div class="all-inputs-signup">
+                    <input class="inputs-signup" (keyup)="checkPasswordAndConfirmPassword()" [(ngModel)]="confirmPassword" type="text" placeholder="Confirm Password" required>
+                </div>
+                <div *ngIf="!passwordAndConfirmPassword" style="position:absolute; color:red;margin-left: 80px;">
+                    <mat-error>Must be same as password</mat-error>
+                </div>
+                <div class="all-inputs-signup">
+                    <input class="inputs-signup-submit" (click)="registerUser()" type="submit" value="Sign Up" />
+                </div>
+                <br>
+                <div  class="all-inputs-signup">
+                    <a href="home-nav/login">Already have an account?</a>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+    
+</div>

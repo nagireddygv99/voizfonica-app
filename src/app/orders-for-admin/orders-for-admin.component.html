@@ -1,0 +1,28 @@
+
+<div class="container">
+    <div class="row">
+        
+        <div class="col-lg-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Order Id</th>
+                        <th>User Phone Number</th>
+                        <th>Recharged Number</th>
+                        <th>Plan Id</th>
+                        <th>Order Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let order of orders">
+                        <td>{{ order.orderId }}</td>
+                        <td>{{ order.userPhoneNumber }}</td>
+                        <td>{{ order.rechargedNumber }}</td>
+                        <td>{{ order.planId }}</td>
+                        <td>{{ order.orderStatus }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

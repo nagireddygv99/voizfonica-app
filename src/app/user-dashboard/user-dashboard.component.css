@@ -1,0 +1,82 @@
+.side-nav-drawer {
+    color:white;
+}
+a {
+  color:white
+}
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  mat-drawer {
+    width:250px;
+    
+  }
+  mat-drawer-container {
+    height: 100%;
+  }
+  
+  mat-drawer {
+    background: rgb(248, 248, 248);
+    color:black;
+  }
+  mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  mat-icon:hover {
+    cursor: pointer;
+    
+  }
+  mat-icon {
+    margin-right: 5px;
+    color:white
+  }
+  mat-nav-list {
+    padding:0px;
+    margin:0px
+  }
+  
+  ul {
+    
+      list-style: none;
+    
+  }
+  .anchor {
+    padding-left: 70px;
+    color:white
+  }
+  button {
+    outline: none;
+    border: 0;
+    background: transparent;
+  }
+  .user {
+    font-size: 14px;
+  }
+  mat-toolbar {
+    background: #f7f7f7;
+  }
+  .user-image {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    
+  }
+  .user-image-icon {
+    height: 18px;
+    font-size: 16px;
+  }
+  
+  .mat-menu-content::ng-deep {
+     
+      width: 200px;
+    
+  }
+
+  a:hover,a:focus {
+    background-color:grey;
+  }

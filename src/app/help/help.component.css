@@ -1,0 +1,9 @@
+a:hover {
+    cursor: pointer;
+}
+button {
+    font-size: 15px;
+}
+.card-body {
+    margin-bottom: 10px;
+}

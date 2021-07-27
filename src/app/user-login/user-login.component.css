@@ -1,0 +1,145 @@
+
+.search-bar {
+    width:300px;
+    margin-left: 50px;
+    border-radius: 8px 0px 0px 8px;
+    border:1px solid grey;
+    outline:0;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 35px;
+    border-right:0px;
+
+}
+
+.mat-card {
+    border-radius: 2%;
+    box-shadow: 0px 0px 1px 1px;
+}
+
+.search-icon {
+    background-color:white;
+    width:30px;
+    height:35px;
+    padding-top:1px;
+    border:1px solid grey;
+    border-left:0px;
+    border-radius: 0px 8px 8px 0px;
+
+}
+.search {
+    display: flex;
+}
+
+
+
+.mobile-num,.password {
+    width:60%;
+    height:40px;
+    font-size: 15px;
+}
+input::placeholder {
+    font-size: 15px;
+}
+.inputs-mobile-password {
+    border-radius: 2px;
+}
+.input-password-1,.input-mobile-number-1 {
+    margin-top: 20px;
+}
+.submit {
+    margin-top: 20px;
+    width:60%;
+    background-color: rgb(173, 2, 2);
+    border:0px;
+    outline:0px;
+    height:35px;
+    color:white;
+}
+
+a {
+    color:black;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    color:  rgb(173, 2, 2);
+    cursor: pointer;
+}
+
+.inputs-login {
+    display: flex;
+    flex: row;
+    justify-content: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+mat-error {
+    font-size: 12px;
+}
+a:active {
+    background-color:cornsilk;
+}
+ 
+input {
+    border-radius: 8px;
+    border:1px solid grey;
+    outline: 0;
+    padding:0px 5px;
+}
+
+
+
+/* .wrap{
+    max-width: 350px;
+    border-radius: 20px;
+    margin: auto;
+    background:rgba(0,0,0,8);
+    box-sizing: border-box;
+    padding: 40px;
+    color:#fff;
+    margin-top:100px;
+}
+h2{
+    text-align: center;
+}
+input[type=text],input[type=password]{
+    width:100%;
+    box-sizing: border-box;
+    padding: 12px 5px;
+     background:rgba(0,0,0,10);
+     outline: none;
+     border: none;
+     border-bottom: 1px dotted#fff;
+     color:#fff;
+     border-radius: 5px;
+     margin: 5px;
+     font-weight: bold;
+}
+input[type=submit]{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    margin-top: 30px;
+    outline: none;
+    border:none;
+    background: #60adde;
+    opacity: 0.7;
+    border-radius: 20px;
+    font-size: 20px;
+    color:fff;
+
+}
+input[type=submit]:hover{
+    background: white;
+    opacity: 0.7;
+}
+a{
+   color: white;
+} */

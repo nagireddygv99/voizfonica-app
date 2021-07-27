@@ -1,0 +1,103 @@
+<div class="container">
+    
+    <div class="row">
+        <div class="col-lg-12">
+           
+                <div>
+                    <!-- <a href="login">
+                        <div class="container p-3 my-3 bg-primary text-white">
+                            <mat-icon>arrow_back</mat-icon> Help
+                        </div>
+                    </a><br> -->
+                    <div class="container">
+                        <div>
+                            <a (click)="togglecontact()">
+                                <mat-icon style="color:green">people</mat-icon> Contact Us
+                            </a>
+                        </div>
+                        <div>
+                            <a>
+                                <mat-icon style="color:green">event_note</mat-icon>Terms and Conditions
+                            </a>
+                        </div>
+                        <div>
+                            <a>
+                                <mat-icon style="color:green">info</mat-icon> App info
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <div *ngIf="contact">
+                    <div class="container">
+                
+                        <h1 class="text-center">VoizFonica FAQ's</h1>
+                        
+                        
+                        <p>
+                            <button type="button" class="btn btn-outline-primary " (click)="isCollapsed1 = !isCollapsed1"
+                                [attr.aria-expanded]="!isCollapsed1" aria-controls="collapseExample">
+                                Do I change my password?
+                            </button>
+                        </p>
+                        <div id="collapseExample" *ngIf="isCollapsed1">
+                            <div class="card">
+                                <div class="card-body">
+                                    click on forgot password
+                                </div>
+                            </div>
+                        </div>
+                
+                    
+                        <p>
+                            <button type="button" class="btn btn-outline-primary" (click)="isCollapsed2 = !isCollapsed2"
+                                [attr.aria-expanded]="!isCollapsed2" aria-controls="collapseExample">
+                                Do I sign up?
+                            </button>
+                        </p>
+                        <div id="collapseExample" *ngIf="isCollapsed2">
+                            <div class="card">
+                                <div class="card-body">
+                                    click on Registration
+                                </div>
+                            </div>
+                        </div>
+                
+                        <p>
+                            <button type="button" class="btn btn-outline-primary" (click)="isCollapsed3 = !isCollapsed3"
+                                [attr.aria-expanded]="!isCollapsed3" aria-controls="collapseExample">
+                                if I do not recharge monthly?
+                            </button>
+                        </p>
+                        <div id="collapseExample" *ngIf="isCollapsed3">
+                            <div class="card">
+                                <div class="card-body">
+                                    you do not recharge after the validity of your existing recharge is over, you will only be able to
+                                    receive incoming calls and messages.
+                                    If you do not do any recharges in 90 days, your number might get disconnected
+                                </div>
+                            </div>
+                        </div>
+                
+                        <p>
+                            <button type="button" class="btn btn-outline-primary" (click)="isCollapsed4 = !isCollapsed4"
+                                [attr.aria-expanded]="!isCollapsed4" aria-controls="collapseExample">
+                                I convert from postpaid to Prepaid and vice versa?
+                            </button>
+                        </p>
+                        <div id="collapseExample" *ngIf="isCollapsed4">
+                            <div class="card">
+                                <div class="card-body">
+                                    yes, you can change your subscription from Prepaid to Post-paid or Post-paid to Prepaid.
+                                </div>
+                            </div>
+                        </div>
+                
+                    </div>
+                </div>
+           
+        </div>
+    </div>
+</div>

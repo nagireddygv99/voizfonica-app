@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="table-responsive">
+                <table class="table">
+                   <thead>
+                    <tr>
+                        <th>OrderId</th>
+                        <th>Plan Amount</th>
+                        <th>Recharged Number</th>
+                        <th>Plan Description</th>
+                        <th>Plan Status</th>
+                        <th></th>
+                    </tr>
+                   </thead>
+                    <tbody>
+                        <tr *ngFor="let order of orderHistory">
+                            <td>{{order.orderId}}</td>
+                            <td>{{order.planAmount}}</td>
+                            <td>{{order.rechargedNumber}}</td>
+                            <td>{{order.planDescription}}</td>
+                            <td>{{order.orderStatus}}</td>
+                            <td><button (click)="saveThisToGenerateBill(order.orderId)" class="btn btn-default" style="font-size: 12px;">View Bill</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

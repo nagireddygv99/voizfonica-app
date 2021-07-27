@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div>
+                <mat-tab-group>
+                    <mat-tab label="Add your Product">
+                        <ng-template matTabContent>
+                            <div class="block" style="margin-top: 50px;">
+                                <h2>Add Your Product</h2>
+                            </div>
+
+                            <div *ngIf="!validInfo" class="block">
+                                <h3>Enter Valid Information</h3>
+                            </div>
+
+                            <div class="block" style="margin-top: 10px;">
+                                <input class="input-field" (keyup)="checkForPhoneNumber()" [(ngModel)]="userProduct.userNumber" type="text" placeholder="Mobile/Dongle Number" />
+                            </div>
+                            <div class="block" *ngIf="!validPhoneNumber">
+                                <mat-error>Enter a valid Number</mat-error>
+                            </div>
+                            <div class="block">
+                                <select class="input-field" [(ngModel)]="userProduct.productId" name="product-type" id="">
+                                    <option [ngValue]="product.no" *ngFor="let product of productSelection">{{ product.name }}</option>
+                                </select>
+                            </div>
+                            <div class="block">
+                                <button (click)="addProductToUser()" mat-button class="btn" style="background-color: #1d1157;font-size: 13px;color:white">Add Your Number</button>
+                            </div>
+                        </ng-template>
+                    </mat-tab>
+
+                    <mat-tab label="Get New Connection">
+                        <ng-template matTabContent>
+
+
+                            <div id="bg">
+                                <div class="module">
+                                    <form class="form">
+                                        <input type="text" placeholder="First Name" class="textbox" />
+                                        <input type="text" name="lastname" id="" class="textbox"
+                                            placeholder="Last Name" />
+                                        <input type="text" placeholder="Email" class="textbox" />
+                                        <select name="type-of-connection" id="connection-type"class="textbox">
+                                            <option value="">Select Connection Type</option>
+                                            <option value="">Prepaid</option>
+                                            <option value="">Postpaid</option>
+                                            <option value="">Dongle</option>
+                                        </select>
+                                        <input type="number" placeholder="Aadhar Number" class="textbox" />
+                                        <textarea type="text" placeholder="Address" class="textbox"></textarea>
+                                        <input type="button" value="Submit" class="button"  style="background-color: #1d1157;font-size: 13px;" />
+                                    </form>
+                                </div>
+                            </div>
+
+
+                        </ng-template>
+                    </mat-tab>
+
+                    <mat-tab *ngIf="prePaidSubscriber" label="Upgrade to Postpaid">
+                        <ng-template matTabContent>
+
+                            <div id="bg">
+                                <div class="module">
+                                    <form class="form">
+                                        <input type="text" placeholder="Mobile Number" class="textbox" /> <br>
+                                        <textarea type="text" placeholder="Reasons for upgrading" class="textbox" ></textarea> <br>
+                                        <input type="button" value="Switch to postpaid" class="button"  style="background-color: #1d1157;font-size: 13px;" /> <br>
+
+                                    </form>
+                                </div>
+                            </div>
+
+
+                        </ng-template>
+                    </mat-tab>
+
+                </mat-tab-group>
+            </div>
+        </div>
+    </div>
+</div>

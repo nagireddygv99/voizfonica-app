@@ -1,0 +1,19 @@
+.row-head {
+    padding:5px 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.row-data-key {
+    padding: 3px 15px;
+    font-size: 13px;
+    font-weight:500;
+}
+.row-data-value {
+    padding:3px 10px;
+    font-size: 13px;
+    font-weight: 400;
+}
+.comp-info {
+    margin-top: 100px;
+    margin-left: 20px;
+}

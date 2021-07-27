@@ -1,0 +1,108 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-lg-6 plan-man">
+            <button class="btn btn-primary add-plan-btn">Add a Plan</button>
+        </div> 
+        <div class="col-lg-6 plan-man">
+            <button class="btn btn-primary remove-plan-btn">Remove a Plan</button>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-lg-2">
+
+        </div>
+        <div class="col-lg-2 add-plan">
+            <input placeholder="Plan Id" class="input" type="number" name="planId" id="" /> <br>
+
+            <input placeholder="Plan Amount" class="input" type="number" name="planAmount" id="" /> <br>
+
+            <textarea placeholder="Plan Description" class="input" type="text" name="planDescription" id="" ></textarea> <br>
+            <input placeholder="Product Id" class="input" type="number" name="productId" id="" /> <br>
+            <input class="btn btn-primary input" type="button" value="Add Plan"> <br>
+
+        </div>
+        <div class="col-lg-4">
+
+        </div>
+
+        <div class="col-lg-2 del-plan">
+            <input placeholder="Plan Id" class="input" type="number" name="planId" id="" /> <br>
+
+            <input class="btn btn-primary input" type="button" value="Remove Plan">
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Plan Id</th>
+                        <th>Plan Amount</th>
+                        <th>Plan Description</th>
+                        <th>Plan Duration</th>
+                        <th>Product Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let plano of plans">
+                        <td>{{plano.planId}}</td>
+                        <td>{{plano.planAmount}}</td>
+                        <td>{{plano.planDescription}}</td>
+                        <td>{{plano.planDuration+ ' days'}}</td>
+                        <td>{{plano.productId==1?'prepaid':plano.productId==2?'Postpaid':'Dongle'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> -->
+
+<mat-tab-group color="primary" backgroundColor="primary">
+    <mat-tab label="List of Plans">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Plan Id</th>
+                    <th>Plan Amount</th>
+                    <th>Plan Description</th>
+                    <th>Plan Duration</th>
+                    <th>Product Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let plano of plans">
+                    <td>{{plano.planId}}</td>
+                    <td>{{plano.planAmount}}</td>
+                    <td>{{plano.planDescription}}</td>
+                    <td>{{plano.planDuration+ ' days'}}</td>
+                    <td>{{plano.productId==1?'prepaid':plano.productId==2?'Postpaid':'Dongle'}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </mat-tab>
+    <mat-tab label="Add a Plan">
+        <div style="display: flex;justify-content: center;margin-top: 50px;">
+            <div>
+                <!-- <input [(ngModel)]="plan.planId" placeholder="Plan Id" class="input" type="number" name="planId" id="" /> <br> -->
+
+            <input [(ngModel)]="plan.planAmount" placeholder="Plan Amount" class="input" type="number" name="planAmount" id="" /> <br>
+
+            <textarea [(ngModel)]="plan.planDescription" placeholder="Plan Description" class="input" type="text" name="planDescription" id="" ></textarea> <br>
+            <input [(ngModel)]="plan.planDuration" type="number" placeholder="Plan Duration in days" class="input" /> <br>
+            <input [(ngModel)]="plan.productId" placeholder="Product Id" class="input product-hover" type="number" name="productId" id="" /> <br>
+            <input class="btn btn-primary input" type="button" (click)="addPlan()" value="Add Plan">
+            </div>
+
+        </div>
+    </mat-tab>
+    <mat-tab label="Remove a Plan">
+        <div style="display: flex;justify-content: center;margin-top: 50px;">
+            <div>
+                <input [(ngModel)]="plan.planId" placeholder="Plan Id" class="input" type="number" name="planId" id="" /> <br>
+
+                <input class="btn btn-primary input" type="button" value="Remove Plan">
+            </div>
+        </div>
+    </mat-tab>
+  </mat-tab-group>

@@ -1,0 +1,62 @@
+<div class="container">
+
+
+    <div *ngIf="!Track">
+      <a (click)="toggleTrack()" style="font-size:16px;float:right;color: white;border-radius: 8px;">Track Ticket</a><br>
+      <div class="page">
+  
+  
+        <form>
+          <div style="display: flex;justify-content: center;">
+            <h1><b>Raise Ticket</b></h1>
+          </div>
+          <label for="Phone Number" style="font-size:15px">Phone Number</label>
+          <input [(ngModel)]="userReport.userNumber" type="text" id="Phone Number" name="Phone Number" placeholder="Enter Your Phone Number(optional)" required><br><br>
+  
+          <!-- <label for="Email Id" style="font-size:20px;">Email Id</label>
+          <input type="text" id="Email Id" name="Email Id" placeholder="Enter Your Email Id" required><br><br>
+  
+  
+          <label for="Subject" style="font-size:20px;">Subject</label>
+          <input type="text" id="Subject" name="Subject" placeholder="Enter Your Subject" required><br><br> -->
+  
+  
+          <label for="Discription" style="font-size:15px;">Discription</label>
+          <textarea [(ngModel)]="userReport.description" id="Discription" name="Discription" placeholder="Write Discription" style="height:200px"
+            required></textarea><br><br>
+  
+          <input (click)="createAReport()" style="font-size:15px; margin:30px" type="submit" value="Submit">
+          <input style="font-size:15px;" type="submit" value="Cancel">
+  
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container1">
+    <div *ngIf="Track">
+      <a (click)="toggleTrack()" style="font-size:16px;float:right;color:white;margin-right:10px;border-radius: 8px;">Raise Ticket</a><br>
+      <div class="Track">
+        <form>
+            <div style="display: flex;justify-content: center;">
+                <h1><b>Track Ticket</b></h1>
+              </div>
+          <label for="Ticket Number" style="font-size:15px;"><b>Ticket Number</b></label><br>
+          <input [(ngModel)]="userReport.ticketNumber" type="text" id="Ticket Number" name="Ticket Number" placeholder="Enter Your Ticket Number"
+            required><br><br>
+          <input (click)="getReportStatus()" style="font-size:15px;" type="submit" value="View Status">
+        </form>
+        <div *ngIf="checkStatus">
+            <div class="statusInfo">
+                <span>Mobile Number</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span>:</span>{{ticketInfo.userNumber}}
+            </div>
+            <div class="statusInfo">
+               <span>Description</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span> :</span>{{ticketInfo.description}}
+            </div>
+            <div class="statusInfo">
+                <span>Status</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span>:</span>{{ticketInfo.ticketStatus=='c'?'Resolved':'Reported'}}
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  </div>

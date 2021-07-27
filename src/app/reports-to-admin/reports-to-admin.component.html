@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Ticket Number</th>
+                            <th>User Number</th>
+                            <th>Ticket Description</th>
+                            <th>Ticket Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let report of userReports">
+                            <td>{{ report.ticketNumber }}</td>
+                            <td>{{ report.userNumber }}</td>
+                            <td>{{ report.description }}</td>
+                            <td>{{ report.ticketStatus }}</td>
+                            <td><button *ngIf="report.ticketStatus=='o'" (click)="closeTicket(report)" class="btn btn-default" style="font-size: 14px;">colse ticket</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

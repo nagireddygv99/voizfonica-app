@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-lg-12">
+            <span>WELCOME TO YOUR</span>
+            <h1 style="font-size: 35px; font-weight: 300;">Account Overview</h1>
+        </div>
+    </div>
+    <div *ngIf="!userHaveProducts" class="row" style="margin-top: 30px;">
+        <div class="col-lg-12">
+            <h1>You have no products subscribed</h1>
+        </div>
+    </div>
+    
+    <div *ngIf="userHaveProducts" class="row" style="margin-top: 30px;display: flex;justify-content: center;">
+        <div *ngIf="!activePlans">
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-lg-12">
+                    <h1>You have no Active plans </h1>
+                </div>
+            </div>
+        </div>
+        <div *ngFor="let product of userProducts" class="col-lg-12">
+           
+                <div *ngFor="let plan of plans">
+                    <div *ngIf="plan.productId==product.productId">
+                        
+                            <div class="col-lg-4">
+                                <mat-card>
+                                    <div>
+                                        <div>
+                                           {{plan.productId==1?'Prepaid':plan.productId==2?'Postpaid':'Dongle'}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {{ product.userNumber }} 
+                                        </div>
+                                        <div style=" margin-top: 10px;">
+                                            <span style="font-size: 20px;">Current Plan</span>
+                                        </div>
+                                        <hr>
+                                        <div>
+                                            <div>
+                                                {{plan.planDescription}}
+                                            </div> 
+                                            <div>
+                                                Rs. {{plan.planAmount}}
+                                            </div>
+                                        </div>
+                                        <div>
+                                            {{plan.planDuration}} days
+                                        </div>
+                                    </div>
+                                </mat-card>
+                            </div>
+                     
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>

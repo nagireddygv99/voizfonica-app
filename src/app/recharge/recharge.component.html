@@ -1,0 +1,68 @@
+<div class="container-fluid">
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-lg-12" style="display: flex;justify-content: center;margin-bottom: 20px;">
+            <span style="font-size: 30px;">Recharge</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" style="display: flex;justify-content: center;">
+            <div>
+                <div>
+                    <div>
+                        <input title="phone number" (keyup)="validatePhoneNubmer()" class="mt-4" [(ngModel)]="rechargePhoneNumber" type="text" name="phoneNumber" id="" placeholder="Mobile Number" />
+                    </div>
+                    
+                    <div *ngIf="!phoneNumberValid" style="position: absolute;font-size: 12px;">
+                        <mat-error>Invalid MobileNumber</mat-error>
+                    </div>
+                </div>
+            <br>
+            <select title="Connection-type" class="mt-2" name="productName" [(ngModel)]="productId" id="">
+                <option *ngFor="let product of products" [ngValue]="product.productId" >{{product.productName}}</option>
+            </select>
+            <br>
+            <input (click)="searchForAvailblePlans()" class="btn btn-success mt-4" type="button" value="Search Plans" />
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <div *ngIf="!plansAvailbleForProduct && askedToShow">
+
+            <h1>No plans Availble for this Product</h1>
+
+        </div>
+        <table *ngIf="plansAvailbleForProduct" class="table">
+
+            <thead>
+                <tr>
+                    <th>Plan Description</th>
+                    <th>Plan Amount</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let plan of selectedOptionPlans">
+                    <td>
+                        <div class="plan-show">
+                            <span>{{ plan.planDescription }}</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="plan-show">
+                            <span>{{ plan.planAmount }}</span>
+                        </div>
+                    </td>
+                    <td>
+                        <button (click)="goToPayment(plan)"  class="btn btn-primary">buy</button>
+                    </td>
+                    
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+
+

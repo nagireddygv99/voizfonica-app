@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row" style="display: flex; justify-content: center; margin: 15px 0px;">
+        <strong style="font-size: 20px;"><u>CUSTOMERS</u></strong>
+        <mat-icon (click)="getAllCustomers()" style="margin-left: 40px;">search</mat-icon>
+    </div>
+    
+    <div class="row">
+        <div class="container">
+            <div>
+                <table class="table">
+                   <thead>
+                    <tr>
+                        <th>Customer Name</th>
+                        <th>Mobile Number</th>
+                        <th>Email Id</th>
+                    </tr>
+                   </thead>
+                    <tbody>
+                        <tr *ngFor="let customer of customers">
+                            <td> {{ customer.userFirstName +" "+ customer.userLastName }} </td>
+                            <td> {{ customer.userPhoneNumber }} </td>
+                            <td> {{ customer.userEmailId }}  </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+        </div>
+    </div>
+</div>

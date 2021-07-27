@@ -1,0 +1,91 @@
+<div class="container">
+    <div>
+        <button class="btn btn-success" style="font-size: 14px;" (click)="generatePDF()">Download Invoice <mat-icon>play_for_work</mat-icon></button>
+    </div>
+    <div id="bill-invoice">
+        <div class="row">
+            <div class="col-lg-1">
+    
+            </div>
+            <div class="col-lg-10">
+                <div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div style="display: flex;justify-content:center;">
+                                <img style="height: 50px;width:50px;border-radius: 30px;margin-right: 20px;" src="https://st4.depositphotos.com/22052918/24790/v/380/depositphotos_247907816-stock-illustration-letters-vf-simple-wings-logo.jpg" alt="">
+                                <span style="font-size: 30px;margin-top: 20px;color:darkred">VoizFonica</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <br>
+                    
+                    <div class="row  row-head" style="background-color:red;border-bottom: 3px solid black;">
+                        <div class="col-lg-12">
+                            <div>
+                                <span>Your Details</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-data" *ngFor="let detail of details" style="border-bottom: 1px solid black;">
+                        <div class="col-lg-2 row-data-key" style="background-color: grey;">
+                            <span>{{detail.key}}</span>
+                        </div>
+                        <div class="col-lg-10 row-data-value">
+                            <span>{{detail.value}}</span>
+                        </div>
+                    </div>
+                    
+                    <br>
+            
+                    <div class="row row-head" style="background-color:red;border-bottom: 3px solid black;">
+                        <div class="col-lg-12">
+                            <div>
+                                <span>Recharge</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-data" *ngFor="let rechargeDetail of rechargeDetails" style="border-bottom: 1px solid black;">
+                        <div class="col-lg-2  row-data-key" style="background-color: grey;">
+                            <span>{{rechargeDetail.key}}</span>
+                        </div>
+                        <div class="col-lg-10 row-data-value">
+                            <span>{{rechargeDetail.value}}</span>
+                        </div>
+                    </div>
+                    <div class="row comp-info">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-lg-10">
+                                    <div>
+                                        
+                                            <span><u>Reach out us at</u></span>
+            
+                                            <br>
+            
+                                            <b>VoizFonica Towers</b>
+                                            <br>
+                                            <span>Hitech City</span>
+                                            <br>
+                                            <span>Hyderabad, Telangana, India</span>
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <span>Signature</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <p style="font-size: 12px;">* This is an auto generated e-bill. Thanks for downloading.
+                            <br>
+                             * Enjoy the world with VoizFonica</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
