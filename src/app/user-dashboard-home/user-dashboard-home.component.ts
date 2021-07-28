@@ -1,4 +1,6 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Plan } from '../classes/plan';
 import { PlanService } from '../services/plan.service';
 import { UserOrderService } from '../services/user-order.service';
 
@@ -21,7 +23,12 @@ export class UserDashboardHomeComponent implements OnInit {
 
  activePlans = true;
 
-  constructor(private _userService:UserServiceService, private _userOrderService:UserOrderService,_planService:PlanService) {
+ today:any = new Date();
+
+ something:any;
+
+  constructor(private _userService:UserServiceService, private _userOrderService:UserOrderService,_planService:PlanService,private datePipe:DatePipe) {
+    this.today = this.datePipe.transform(this.today, 'yyyy-MM-dd');
     let userPhoneNumber = localStorage.getItem("user_phone_number");
     _userService.getUserProduct("user-product/get-user-product",userPhoneNumber).subscribe({
       next:data=> {
@@ -47,7 +54,27 @@ export class UserDashboardHomeComponent implements OnInit {
                 for(let order of this.userOrders) {
                   _planService.getPlanFromPlanId("plan/get-plan-by-plan-id",order.planId).subscribe({
                     next:data => {
-                      this.plans.push(data);
+
+
+
+                      var date1 = new Date(this.today); 
+	                    var date2 = new Date(order.planExpiryDate); 
+  
+                      var Time = date2.getTime() - date1.getTime(); 
+                      var Days = Time / (1000 * 3600 * 24);
+
+                      
+                      this.something = data;
+
+                      console.log(Days)
+
+                      this.something.planValidity = Days;
+                      
+                    
+
+
+                      // this.plans.push(data);
+                      this.plans.push(this.something);
                       console.log(this.plans);
                       console.log('worked');
                     },

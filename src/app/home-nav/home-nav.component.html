@@ -1,170 +1,284 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <mat-toolbar style="position: fixed; height:8%;z-index: 999;background-color: #040647;box-shadow: 0px 1px 5px  #040647;left:0">
-                <img style="height: 35px;width:35px;border-radius: 30px;margin-right: 20px;" src="https://st4.depositphotos.com/22052918/24790/v/380/depositphotos_247907816-stock-illustration-letters-vf-simple-wings-logo.jpg" alt="">
-                <span class="comp-logo" (click)="titleClick()">VoizFonica</span>
-                <!-- <div class="search">
+  <div class="row">
+    <div class="col-12">
+      <mat-toolbar
+        style="position: fixed; height:8%;z-index: 999;background-color: #040647;box-shadow: 0px 1px 5px  #040647;left:0">
+        <img style="height: 35px;width:35px;border-radius: 30px;margin-right: 20px;"
+          src="https://st4.depositphotos.com/22052918/24790/v/380/depositphotos_247907816-stock-illustration-letters-vf-simple-wings-logo.jpg"
+          alt="">
+        <span class="comp-logo" (click)="titleClick()">VoizFonica</span>
+        <!-- <div class="search">
                     <input class="search-bar" type="text" name="searchbar" id=""/> <mat-icon class="search-icon">search</mat-icon>
                 </div> -->
-                <div style="flex:1 1 auto">
-                </div>
-                <a (click)="onClick()" mat-button class="btnn" routerLink="login">Login</a>
-                <a (click)="onClick()" mat-button class="btnn" routerLink="register-user">Sign Up</a>
+        <div style="flex:1 1 auto">
+        </div>
+        <a (click)="onClick()" mat-button class="btnn" routerLink="login">Login</a>
+        <a (click)="onClick()" mat-button class="btnn" routerLink="register-user">Sign Up</a>
 
-                <div>
-                    
-                        <a mat-button class="btnn prod-hov">Products</a>
-                    
-                    <div class="list-prod">
-                        <ul>
-                            <li>Prepaid</li>
-                            <li>Postpaid</li>
-                            <li>Dongle</li>
-                        </ul>
-                    </div>
+        <div>
+
+          <a mat-button  href="#products-plans" class="btnn prod-hov">Products</a>
+
+          <!-- <div class="list-prod">
+            <ul>
+              <li><a mat-button href="#products-plans">Prepaid</a></li>
+              <li><a href="#products-plans">Postpaid</a></li>
+              <li><a href="#products-plans">Dongle</a></li>
+            </ul>
+          </div> -->
+        </div>
+
+        <!-- <a mat-button class="btnn" routerLink="products">Products</a> -->
+        <a (click)="onClick()" mat-button class="btnn" routerLink="admin-login">Admin</a>
+        <!-- <a mat-button routerLink="help">Help</a> -->
+      </mat-toolbar>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 5%;">
+
+    <div class="{{portion}}">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div *ngIf="isHome" class="carousel-inner">
+          <div class="item active">
+            <img style="border-radius: 2px;"
+              src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
+              class="d-block w-100" alt="...">
+          </div>
+          <div class="item">
+            <img style="border-radius: 2px;"
+              src="https://media.istockphoto.com/photos/waiter-hand-holding-an-empty-digital-tablet-with-smart-city-and-5g-picture-id889321368?k=6&m=889321368&s=612x612&w=0&h=gD82plA21r5IESFpkMTiwfbLCOmH5Bxr0_Uf6IeE1H4="
+              class="d-block w-100" alt="...">
+
+          </div>
+          <div class="item">
+            <img style="border-radius: 2px;"
+              src="https://images.unsplash.com/photo-1590278458425-6aa3912a48a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80"
+              class="d-block w-100" alt="...">
+          </div>
+        </div>
+
+
+
+        <div *ngIf="!isHome" class="carousel-inner">
+          <div class="item active">
+            <img style="border-radius: 2px;" src="/assets/images/payment-carousel1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="item">
+            <img style="border-radius: 2px;" src="/assets/images/payment-carousel2.jpg" class="d-block w-100" alt="...">
+
+          </div>
+          <div class="item">
+            <img style="border-radius: 2px;" src="/assets/images/payment-carousel3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="item">
+            <img style="border-radius: 2px;" src="/assets/images/payment-carousel4.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+
+
+
+        <div *ngIf="isHome" class="text-on-image">
+          <span>Welcome to VoizFonica</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-1">
+
+    </div>
+    <div *ngIf="!isHome" class="col-lg-4" style="margin-top: 10px;">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="container wifi" style="text-align: center; margin-top: 5%;">
+        <!-- START THE FEATURETTES -->
+        <br>
+        <hr class="featurette-divider body1">
+        <br>
+        <div class="row featurette" style="color: black;">
+          <!-- <div class="col-md-1"></div> -->
+          <div class="col-md-7">
+            <div style="display: flex;justify-content: center;">
+              <h1 class="featurette-heading"><strong>VOIZFONICA UNLIMITED PREPAID<span
+                    class="text-muted"></span></strong></h1>
+
+            </div>
+            <div style="display: flex;justify-content: center;">
+              <span class="lead" style="text-align: left;font-size: 20px;"> Our best plans, our best prices, on the best
+                network </span>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <img style="width: 320px;height:250px;border-radius: 10px;background-color:#c20202;"
+              src="https://assets.airtel.in/static-assets/new-home/img/airtel-unlimited-talk.png?v=1626936285993"
+              alt="Generic placeholder image">
+          </div>
+        </div>
+
+        <br>
+        <hr class="featurette-divider"><br>
+
+        <div class="row featurette" style="color: black;">
+          <div class="col-md-7 order-md-2">
+            <h1 class="featurette-heading"><strong>SEE YOURSELF</strong></h1>
+            <br>
+            <p class="lead" style="font-size: 20px;">Networking is a lot like nutrition and fitness: we know what to do,
+              the hard part is making it a top priority</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img style="width: 320px;height:250px;border-radius: 10px;"
+              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+              alt="Generic placeholder image">
+          </div>
+        </div>
+
+        <br>
+        <hr class="featurette-divider"> <br>
+
+        <div class="row featurette" style="color: black;">
+          <div class="col-md-7">
+            <h1 class="featurette-heading"><strong> PORT TO VOIZFONICA </strong></h1>
+            <br>
+            <p class="lead" style="font-size: 20px;">Switch to VoizFonica without changing your number</p>
+          </div>
+          <div class="col-md-5">
+            <img style="width: 320px;height:250px;border-radius: 10px;"
+              src="https://images.unsplash.com/photo-1554260570-e9689a3418b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=760&q=80"
+              alt="Generic placeholder image">
+          </div>
+        </div>
+
+        <br>
+        <hr class="featurette-divider"> <br>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 style="font-weight: 500;font-size: 30px;">Our Services</h1>
+          </div>
+          <div class="col-lg-12">
+            <h2>Wide range of services. Unlimited experience</h2>
+          </div>
+          <div class="col-lg-12 service">
+            <div class="service-icons">
+              <div>
+                <img class="icon"
+                  src="data:image/png;base64,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"
+                  alt="">
+                <br>
+                Prepaid
+              </div>
+
+              <div>
+                <img class="icon"
+                  src="data:image/png;base64,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"
+                  alt="">
+                <br>
+                PostPaid
+              </div>
+              <div>
+                <img class="icon"
+                  src="data:image/png;base64,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"
+                  alt="">
+                <br>
+                Dongle
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br><hr class="featurette-divider">  <br>
+
+        <!-- /END THE FEATURETTES -->
+      </div>
+    </div>
+  </div>
+  <div id="products-plans" class="row">
+    <div class="col-lg-12">
+      <h1 style="font-weight: 500;font-size: 30px;display: flex;justify-content: center;margin-bottom: 50px;">Our Products</h1>
+    </div>
+    <div class="col-lg-4">
+      <mat-card>
+        <mat-card-title style="margin-bottom: 30px;">Prepaid</mat-card-title>
+        <mat-card-content>
+          <div *ngFor="let plan of plans">
+            <div *ngIf="plan.productId==1">
+              <mat-card class="plan-card">
+                <div style="display: flex;justify-content: space-between;">
+                  <div>
+                    <span>{{ plan.planDescription }}</span>
+                  </div>
+                  <div>
+                    <span>Rs. {{ plan.planAmount }}/-</span>
+                  </div>
+                  <div>
+                    <button (click)="goLogin()" class="btn btn-success">Buy</button>
+                  </div>
+                </div>
+              </mat-card>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-lg-4">
+      <mat-card>
+        <mat-card-title style="margin-bottom: 30px;">Postpaid</mat-card-title>
+        <mat-card-content>
+          <div *ngFor="let plan of plans">
+            <div *ngIf="plan.productId==2">
+              <mat-card class="plan-card">
+                <div style="display: flex;justify-content: space-between;">
+                  <div>
+                    <span>{{ plan.planDescription }}</span>
+                  </div>
+                  <div>
+                    <span>Rs. {{ plan.planAmount }}/-</span>
+                  </div>
+                  <div>
+                    <button (click)="goLogin()" class="btn btn-success">Buy</button>
+                  </div>
                 </div>
                 
-                <!-- <a mat-button class="btnn" routerLink="products">Products</a> -->
-                <a (click)="onClick()" mat-button class="btnn" routerLink="admin-login">Admin</a>
-                <!-- <a mat-button routerLink="help">Help</a> -->
-            </mat-toolbar>
-        </div>
-    </div>
-    <div class="row" style="margin-top: 5%;">
-        
-        <div class="{{portion}}">
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                <div *ngIf="isHome" class="carousel-inner">
-                  <div class="item active">
-                      <img style="border-radius: 2px;" src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="item">
-                    <img style="border-radius: 2px;" src="https://media.istockphoto.com/photos/waiter-hand-holding-an-empty-digital-tablet-with-smart-city-and-5g-picture-id889321368?k=6&m=889321368&s=612x612&w=0&h=gD82plA21r5IESFpkMTiwfbLCOmH5Bxr0_Uf6IeE1H4=" class="d-block w-100" alt="...">
-                    
-                  </div>
-                  <div class="item">
-                    <img style="border-radius: 2px;" src="https://images.unsplash.com/photo-1590278458425-6aa3912a48a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-
-
-
-                <div *ngIf="!isHome" class="carousel-inner">
-                    <div class="item active">
-                        <img style="border-radius: 2px;" src="/assets/images/payment-carousel1.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="item">
-                      <img style="border-radius: 2px;" src="/assets/images/payment-carousel2.jpg" class="d-block w-100" alt="...">
-                      
-                    </div>
-                    <div class="item">
-                      <img style="border-radius: 2px;" src="/assets/images/payment-carousel3.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="item">
-                      <img style="border-radius: 2px;" src="/assets/images/payment-carousel4.jpg" class="d-block w-100" alt="...">
-                    </div>
-                  </div>
-
-
-
-                <div *ngIf="isHome" class="text-on-image">
-                    <span>Welcome to VoizFonica</span>
-                </div>
+              </mat-card>
             </div>
-        </div>
-        <div class="col-lg-1">
-
-        </div>
-        <div *ngIf="!isHome" class="col-lg-4" style="margin-top: 10px;">
-            <router-outlet></router-outlet>
-        </div>
-
+          </div>
+        </mat-card-content>
+      </mat-card>
     </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="container wifi" style="text-align: center; margin-top: 5%;">   
-                <!-- START THE FEATURETTES -->
-              <br>
-                <hr class="featurette-divider body1">
-                <br>
-                <div class="row featurette" style="color: black;">
-                  <!-- <div class="col-md-1"></div> -->
-                  <div class="col-md-7">
-                        <div style="display: flex;justify-content: center;">
-                            <h1 class="featurette-heading"><strong >VOIZFONICA UNLIMITED PREPAID<span class="text-muted" ></span></strong></h1>
-                    
-                        </div>
-                        <div style="display: flex;justify-content: center;">
-                            <span class="lead" style="text-align: left;font-size: 20px;">  Our best plans, our best prices, on the best network </span>
-                        </div>
+    <div class="col-lg-4">
+      <mat-card>
+        <mat-card-title style="margin-bottom: 30px;">Dongle</mat-card-title>
+        <mat-card-content>
+          <div *ngFor="let plan of plans">
+            <div *ngIf="plan.productId==3">
+              <mat-card class="plan-card">
+                <div style="display: flex;justify-content: space-between;">
+                  <div>
+                    <span>{{ plan.planDescription }}</span>
                   </div>
-                  <div class="col-md-5">
-                    <img style="width: 320px;height:250px;border-radius: 10px;background-color:#c20202;"  src="https://assets.airtel.in/static-assets/new-home/img/airtel-unlimited-talk.png?v=1626936285993" alt="Generic placeholder image">
+                  <div>
+                    <span>Rs. {{ plan.planAmount }}/-</span>
+                  </div>
+                  <div>
+                    <button (click)="goLogin()" class="btn btn-success">Buy</button>
                   </div>
                 </div>
-              
-                <br><hr class="featurette-divider"  ><br>
-              
-                <div class="row featurette" style="color: black;">
-                  <div class="col-md-7 order-md-2">
-                    <h1 class="featurette-heading"><strong>SEE YOURSELF</strong></h1>
-                    <br><p class="lead" style="font-size: 20px;">Networking is a lot like nutrition and fitness: we know what to do, the hard part is making it a top priority</p>
-                  </div>
-                  <div class="col-md-5 order-md-1">
-                    <img style="width: 320px;height:250px;border-radius: 10px;" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Generic placeholder image">
-                  </div>
-                </div>
-              
-                <br><hr class="featurette-divider" >  <br>
-              
-                <div class="row featurette" style="color: black;">
-                  <div class="col-md-7">
-                    <h1 class="featurette-heading"><strong> PORT TO VOIZFONICA </strong></h1>
-                    <br><p class="lead" style="font-size: 20px;">Switch to VoizFonica without changing your number</p>
-                  </div>
-                  <div class="col-md-5">
-                    <img style="width: 320px;height:250px;border-radius: 10px;" src="https://images.unsplash.com/photo-1554260570-e9689a3418b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=760&q=80" alt="Generic placeholder image">
-                  </div>
-                </div>
-              
-                <br><hr class="featurette-divider">  <br>
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 style="font-weight: 500;font-size: 30px;">Our Services</h1>
-                    </div>
-                    <div class="col-lg-12">
-                        <h2>Wide range of services. Unlimited experience</h2>
-                    </div>
-                    <div class="col-lg-12 service">
-                        <div class="service-icons">
-                            <div>
-                                <img class="icon" src="data:image/png;base64,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" alt="">
-                                <br>
-                                Prepaid
-                            </div>
-                            
-                            <div>
-                                <img class="icon" src="data:image/png;base64,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" alt="">
-                                <br>
-                                PostPaid
-                            </div>
-                            <div>
-                                <img class="icon" src="data:image/png;base64,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" alt="">
-                                <br>
-                                Dongle
-                            </div>    
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <!-- <br><hr class="featurette-divider">  <br> -->
-              
-                <!-- /END THE FEATURETTES -->
-              </div>
-        </div>
+                
+              </mat-card>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
     </div>
-    <app-app-footer></app-app-footer>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <app-app-footer></app-app-footer>
 </div>

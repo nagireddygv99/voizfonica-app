@@ -98,3 +98,14 @@ li:hover {
 }
 
 
+.plan-card {
+    margin-top: 10px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 1px 1px grey;
+}
+.mat-card:not(.plan-card) {
+    box-shadow: 0px 0px 1px 1px grey;
+    border-radius: 10px;
+}
+
+

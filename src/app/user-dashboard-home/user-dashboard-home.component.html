@@ -39,11 +39,16 @@
                                                 {{plan.planDescription}}
                                             </div> 
                                             <div>
-                                                Rs. {{plan.planAmount}}
+                                                Rs. {{plan.planAmount}}/-
                                             </div>
                                         </div>
                                         <div>
-                                            {{plan.planDuration}} days
+                                           Plan Duration : {{plan.planDuration}} days
+                                        </div>
+                                        <br>
+                                         
+                                        <div>
+                                           Validity      : <span style="color:red">{{plan.planValidity}} days</span> left 
                                         </div>
                                     </div>
                                 </mat-card>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminServiceService } from '../services/admin-service.service';
 
 @Component({
   selector: 'app-home-nav',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeNavComponent implements OnInit {
 
-  constructor() {
+  constructor(private _adminService:AdminServiceService) {
     localStorage.setItem('portion',"col-lg-12");
     
     if(this.portion=="col-lg-12") {
@@ -16,6 +17,7 @@ export class HomeNavComponent implements OnInit {
     else {
       this.isHome = false;
     }
+    this.getAllPlans();
    }
 
 
@@ -37,5 +39,35 @@ export class HomeNavComponent implements OnInit {
     window.location.href="home-nav"
     this.portion = localStorage.getItem('portion');
   }
+
+
+
+
+
+
+
+
+  plans:any;
+
+
+  getAllPlans() {
+    this._adminService.getAllPlansForAdmin("plan/get-all-plans").subscribe({
+      next:data => {
+        this.plans = data;
+        console.log(this.plans);
+      },
+      error:error => {
+        console.log(error);
+      }
+
+    });
+  }
+
+  goLogin() {
+    window.location.href = "home-nav/login";
+  }
+
+
+
 
 }

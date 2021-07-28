@@ -51,6 +51,9 @@ import { UserProductsComponent } from './user-products/user-products.component';
 import { UserReportsComponent } from './user-reports/user-reports.component';
 import { ReportsToAdminComponent } from './reports-to-admin/reports-to-admin.component';
 import { AdminDashboardHomeComponent } from './admin-dashboard-home/admin-dashboard-home.component';
+import {Ng2PageScrollModule} from 'ng2-page-scroll';
+import { DatePipe } from '@angular/common';
+
 
 
 @NgModule({
@@ -109,11 +112,12 @@ import { AdminDashboardHomeComponent } from './admin-dashboard-home/admin-dashbo
     MatInputModule,
     ReactiveFormsModule,
     MatCardModule,
-    MatTabsModule
+    MatTabsModule,
+    Ng2PageScrollModule,
     
   ],
   providers: [
-   
+   DatePipe
   ],
   bootstrap: [AppComponent]
 })
